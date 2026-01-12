@@ -1,13 +1,11 @@
 const express = require("express");
+const registrationController = require("../../contorllers/registrationControllers");
+const loginController = require("../../contorllers/loginController");
 const routes = express.Router();
 
-routes.get("/registration", (req, res) => {
-  console.log("registration");
-  res.send("registration");
-});
-routes.get("/Product", (req, res) => {
-  console.log("Product");
-  res.send("Product");
-});
+routes.get("/registration", registrationController);
+
+
+routes.get("/login", loginController);
 
 module.exports = routes;
