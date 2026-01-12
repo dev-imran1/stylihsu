@@ -1,15 +1,9 @@
-const express = require("express")
-const routes = express.Router()
-const apiRoutes = require("./api")
+const express = require("express");
+const routes = express.Router();
+const apiRoutes = require("./api");
 
+let apiBaseURL = "/api/v1";
 
-
-
-const baseURL = "/api/v1"
-
-
-routes.use(baseURL,apiRoutes)
-
-
+routes.use(apiBaseURL, apiRoutes);
 
 module.exports = routes;
